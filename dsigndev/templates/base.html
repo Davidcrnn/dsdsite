@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+{% load sass_tags %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DsignDev</title>
+    <link rel="stylesheet" href="{% sass_src '../static/dsigndev/css/style.scss'%}" type="text/css" media="screen">
+</head>
+
+<body>
+    {% block content %}
+    {% endblock content %}
+</body>
+
+</html>
