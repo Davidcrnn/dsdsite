@@ -1,4 +1,24 @@
+.navbar-container {
+  padding: 20px 40px; }
+
+.logo {
+  background-image: url(../images/logo-dev.svg);
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 100px; }
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+
+.navbar-links li {
+  list-style: none; }
+
 body {
-  background-color: yellow; }
+  background-color: #002139;
+  color: white; }
 
 /*# sourceMappingURL=style.css.map */
