@@ -1,0 +1,25 @@
+// Navbar SCSS
+
+.navbar-container {
+    padding: 20px 40px;
+}
+
+.logo {
+    background-image: url(../images/logo-dev.svg);
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 100px;
+}
+
+.navbar-links {
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    } li {
+        list-style: none;
+    }
+}
