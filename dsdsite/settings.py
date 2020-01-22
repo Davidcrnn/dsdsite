@@ -111,6 +111,22 @@ USE_L10N = True
 
 USE_TZ = True
 
+# EMAIL_HOST = 'smtp.sendgrid.net'
+# EMAIL_PORT = 587
+# # EMAIL_HOST_USER = 'dsigndev'
+# # EMAIL_HOST_PASSWORD = 'An@co'
+# EMAIL_USE_TLS = True
+
+
+SENDGRID_API_KEY = config('SENGDRID_API_KEY')
+EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+
+# Toggle sandbox mode (when running in DEBUG mode)
+SENDGRID_SANDBOX_MODE_IN_DEBUG = True
+
+# echo to stdout or any other file-like object that is passed to the backend via the stream kwarg.
+SENDGRID_ECHO_TO_STDOUT = True
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/

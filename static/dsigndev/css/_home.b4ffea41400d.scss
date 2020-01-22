@@ -1,0 +1,58 @@
+// Banner Style
+
+.banner-home {
+    background-image: url(../images/hero-box.svg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+
+.banner-text {
+    position: absolute;
+    top: 95px;
+    width: 30%;
+    padding-left: 40px;
+}
+
+
+// Services section
+
+.services-container {
+    color: $color-blue;
+    padding: 20px 40px;
+}
+
+.services-card {
+    text-align: center;
+    padding: 50px;
+    img {
+        height: 80px;
+    } h2 {
+        font-size: 20px;
+        padding: 20px O O;
+    }
+}
+
+// Projets Section
+
+.projets-container {
+    background-color: $color-blue;
+    padding: 20px 40px;
+    min-height: 60vh;
+}
+
+
+.projets-card {
+    padding: 15px;
+    background: white;
+    color: $color-blue;
+}
+.projet-image {
+    height: 300px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
