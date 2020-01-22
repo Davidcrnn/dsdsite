@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#002139;}
+	.st1{fill:#002139;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st3{fill:#FAF7ED;}
+	.st4{fill:#FFFFFF;}
+	.st5{fill:none;}
+	.st6{font-family:'MyriadPro-Regular';}
+	.st7{font-size:14px;}
+</style>
+<g>
+	<circle class="st0" cx="50" cy="50.2" r="50.2"/>
+</g>
+<path class="st1" d="M83.1,70.5H17.9c-2.4,0-4.4-2-4.4-4.4V24.9c0-2.4,2-4.4,4.4-4.4h65.2c2.4,0,4.4,2,4.4,4.4v41.2
+	C87.5,68.5,85.5,70.5,83.1,70.5z"/>
+<path class="st2" d="M82.7,69H18.3c-1.8,0-3.3-1.5-3.3-3.3V25.3c0-1.8,1.5-3.3,3.3-3.3h64.3c1.8,0,3.3,1.5,3.3,3.3v40.3
+	C86,67.5,84.5,69,82.7,69z"/>
+<rect x="39" y="71" class="st3" width="25" height="14"/>
+<path class="st4" d="M66,87H36c-0.5,0-1-0.4-1-1l0,0c0-0.6,0.5-1,1-1h30c0.6,0,1,0.4,1,1l0,0C67,86.6,66.6,87,66,87z"/>
+<rect x="37.1" y="40.4" class="st5" width="31.8" height="10.2"/>
+<text transform="matrix(1 0 0 1 37.0832 50.3568)" class="st4 st6 st7">&lt; / &gt;</text>
+</svg>

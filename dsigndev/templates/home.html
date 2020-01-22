@@ -2,5 +2,178 @@
 {% load static %}
 
 {% block content %}
-<h1>Hello it works</h1>
+<div class="banner-home">
+    <div class="banner-text">
+        <h1>Envie d'être présent sur le net ? Je vous connecte</h1>
+    </div>
+    <div class="banner-call">
+        <a href="">Contactez-moi</a>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="services-container">
+        <div class="services-header">
+            <h1>Services
+                <hr class="line">
+            </h1>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="services-card">
+                    <img src="{% static '../static/dsigndev/images/web.svg' %}" alt="">
+                    <h2>Projets web</h2>
+                    <p>Site vitrine, site catologue, solution e-commerce, blog</p>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="services-card">
+                    <img src="{% static '../static/dsigndev/images/designer.svg' %}" alt="">
+                    <h2>Conception graphique</h2>
+                    <p>Webdesign, templates, charte graphique</p>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="services-card">
+                    <img src="{% static '../static/dsigndev/images/referenceur.svg' %}" alt="">
+                    <h2>Référencement naturel</h2>
+                    <p>Un code optimisé pour un référencement optimal</p>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="services-card">
+                    <img src="{% static '../static/dsigndev/images/intégrateur.svg' %}" alt="">
+                    <h2>Intégration Web</h2>
+                    <p>Html, Css répondant aux standards du Web</p>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="services-card">
+                    <img src="{% static '../static/dsigndev/images/responsive.svg' %}" alt="">
+                    <h2>Responsive Design</h2>
+                    <p>Compatible sur tous support: Ordinateur, tablette et mobile</p>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="services-card">
+                    <img src="{% static '../static/dsigndev/images/tdb.svg' %}" alt="">
+                    <h2>Interface d'administration</h2>
+                    <p>Tableau de bord très simple d'utilisation permettant de gérer le fonctionnement du site</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="projets-container">
+    <div class="container-fluid">
+        <div class="projets-header">
+            <h1>Projets</h1>
+            <hr>
+        </div>
+        <div class="row">
+            {% for projet in projets %}
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <a data-toggle="modal" data-target="#exampleModal{{ projet.id }}" style="cursor: pointer;">
+                    <div class="projets-card">
+                        <div class="projet-image" style="background-image: url('{{ projet.image.url}}');">
+                        </div>
+                        <div class="projets-header-card">
+                            <h1>{{ projet.title }}</h1>
+
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="modal fade projet-modal-container" id="exampleModal{{ projet.id }}" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">{{projet.title}}</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" style="background-image: url('{{ projet.image.url}}');">
+                                    </div>
+                                    <div class="swiper-slide" style="background-image: url('{{ projet.image.url}}');">
+                                    </div>
+                                    <div class="swiper-slide" style="background-image: url('{{ projet.image.url}}');">
+                                    </div>
+
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="swiper-pagination"></div>
+
+                            <p>{{ projet.description }}</p>
+                        </div>
+                        <div class="modal-footer">
+                            {% if projet.url %}
+                            <a href="{{ projet.url}}">Visiter le site</a>
+                            {% else %}
+                            <a href="" class="disabled">Pas encore disponible</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="contact-container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <ul>
+                    <li>David CRENIN</li>
+                    <li>Développeur web</li>
+                    <li>Paris</li>
+                    <li>david.crenin@gmail.com</li>
+                    <li>+33 (0)684098911</li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="contact-form">
+                    <form method="POST" class="card-body">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock content %}
+
+{% block extra_js %}
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: true,
+        },
+    });
+</script>
+{% endblock extra_js %}
