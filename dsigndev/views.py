@@ -40,7 +40,7 @@ class HomePageView(View):
                     send_mail(subject, message, from_email,
                               ['david.crenin@gmail.com'])
                     messages.success(
-                        request, 'Your password was updated successfully!')
+                        request, 'Votre message a été envoyé !')
                 except BadHeaderError:
                     return HttpResponse('Invalid header found.')
                 return redirect('home')
