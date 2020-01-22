@@ -111,14 +111,15 @@ USE_L10N = True
 
 USE_TZ = True
 
-# EMAIL_HOST = 'smtp.sendgrid.net'
-# EMAIL_PORT = 587
-# # EMAIL_HOST_USER = 'dsigndev'
-# # EMAIL_HOST_PASSWORD = 'An@co'
-# EMAIL_USE_TLS = True
-
 
 SENDGRID_API_KEY = config('SENGDRID_API_KEY')
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
+EMAIL_USE_TLS = True
+
+
 EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
 
 # Toggle sandbox mode (when running in DEBUG mode)
