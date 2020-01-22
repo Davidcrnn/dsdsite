@@ -38,7 +38,7 @@ class HomePageView(View):
 
                 try:
                     send_mail(subject, message, from_email,
-                              ['david.crenin@gmail.com'])
+                              ['david.crenin@gmail.com'], fail_silently=False)
                     messages.success(
                         request, 'Votre message a été envoyé !')
                 except BadHeaderError:

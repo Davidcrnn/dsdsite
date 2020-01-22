@@ -125,9 +125,6 @@ EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
 # # Toggle sandbox mode (when running in DEBUG mode)
 SENDGRID_SANDBOX_MODE_IN_DEBUG = False
 
-# # echo to stdout or any other file-like object that is passed to the backend via the stream kwarg.
-# SENDGRID_ECHO_TO_STDOUT = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
