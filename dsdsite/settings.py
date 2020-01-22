@@ -14,7 +14,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['ancient-retreat-84146.herokuapp.com', 'localhost']
 
@@ -111,16 +111,14 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+SENDGRID_SANDBOX_MODE_IN_DEBUG = False
 SENDGRID_API_KEY = config('SENGDRID_API_KEY')
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'apikey'
 EMAIL_HOST_PASSWORD = config('SENGDRID_API_KEY')
 EMAIL_USE_TLS = True
-
-
-EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
 
 
 # Static files (CSS, JavaScript, Images)
