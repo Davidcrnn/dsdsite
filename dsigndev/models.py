@@ -27,7 +27,7 @@ class Projet(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     status = models.CharField(choices=STATUS_CHOICES, max_length=100)
-    url = models.URLField(null=True, blank=True)
+    url = models.CharField(null=True, blank=True, max_length=250)
     visible = models.BooleanField(default=True)
     year = models.IntegerField(default=2019)
 

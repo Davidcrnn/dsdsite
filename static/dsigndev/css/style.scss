@@ -7,5 +7,11 @@
 body {
     background-color: white;
     color: white;
-   
+    font-family: 'Nueva';
+}
+
+@font-face {
+    font-family: 'Nueva';
+    src: local('Nueva'),
+    url('../fonts/NuevaStd-Regular.otf') format('opentype');
 }
