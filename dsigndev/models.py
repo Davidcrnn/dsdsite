@@ -2,17 +2,17 @@ from django.db import models
 
 # Create your models here.
 CATEGORY_SITE = (
-    ('Vitrine', 'Site Vitrine'),
-    ('Catalogue', 'Site Catalogue'),
+    ('Site vitrine', 'Site Vitrine'),
+    ('Site Catalogue', 'Site Catalogue'),
     ('Blog', 'Site blog'),
-    ('Ecommerce', 'Site e-commerce'),
+    ('Site e-commerce', 'Site e-commerce'),
 )
 
 STATUS_CHOICES = {
-    ('developpement', 'En développement'),
-    ('refonte', 'Refonte du site'),
-    ('production', 'En ligne'),
-    ('projet', 'Projet')
+    ('En développement', 'En développement'),
+    ('Refonte du site', 'Refonte du site'),
+    ('En ligne', 'En ligne'),
+    ('Projet', 'Projet')
 }
 
 
@@ -33,11 +33,3 @@ class Projet(models.Model):
 
     def __str__(self):
         return self.title
-
-
-class Message(models.Model):
-    nom = models.CharField(max_length=100)
-    phone = models.CharField(max_length=10, null=True, blank=True)
-    message = models.TextField()
-    Objet = models.CharField(max_length=200)
-    email = models.EmailField()

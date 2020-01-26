@@ -2,81 +2,158 @@
 {% load static %}
 
 {% block content %}
-<div class="banner-home">
-    <div class="banner-text">
-        <h1>Envie d'être présent sur le net ? Je vous connecte</h1>
+<div class="navbar-container">
+    <div class="logo">
+
     </div>
-    <div class="banner-call">
-        <a href="">Contactez-moi</a>
+
+    <div class="navbar-links d-none d-md-block">
+        <ul>
+            <li><a href="#services" class="js-anchor-link btn-2">SERVICES</a></li>
+            <li><a href="#projets" class="js-anchor-link btn-2">PROJETS</a></li>
+            <li><a href="#contact" class="js-anchor-link btn-2">CONTACT</a></li>
+        </ul>
+    </div>
+    <div class="hamburger-nav d-md-none d-lg-none">
+
+        <a class="navbar-toggler first-button" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent20" aria-controls="navbarSupportedContent20" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <div class="animated-icon1"><span></span><span></span><span></span></div>
+        </a>
     </div>
 </div>
 
 
+</div>
+
+
+
+<!-- Collapsible content -->
+<div class="collapse navbar-collapse menu-modal-nav " id="navbarSupportedContent20">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link btn-2 js-anchor-link" href="/">ACCUEIL <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn-2 js-anchor-link" href="#services">SERVICES</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn-2 js-anchor-link" href="#projets">PROJETS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn-2 js-anchor-link" href="#contact">CONTACT</a>
+        </li>
+    </ul>
+    <!-- Links -->
+
+</div>
+<!-- Collapsible content -->
+
+
+
 <div class="container-fluid">
+    <div class="banner-home">
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 banner-text">
+
+                <div class="banner-impact">
+                    <h1>Envie d'être présent sur le net ? Je vous connecte</h1>
+
+                </div>
+                <div class="banner-paragraphe">
+                    <h4>Création de site internet sur mesure !</h4>
+                </div>
+
+                <div class="banner-call">
+                    <a href="#contact" class="js-anchor-link">Contactez-moi</a>
+
+                </div>
+
+
+            </div>
+            <div class="col-xs-12 col-sm-7">
+                <div class="banner-bg">
+                    <img src="{% static '../static/dsigndev/images/bg.svg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid" id="services" class="js-anchor-link">
     <div class="services-container">
         <div class="services-header">
-            <h1>Services
-                <hr class="line">
+            <h1 id="services">Services
+                <hr class="service-line">
             </h1>
 
         </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="col-xs-12 col-md-5">
                 <div class="services-card">
-                    <img src="{% static '../static/dsigndev/images/web.svg' %}" alt="">
-                    <h2>Projets web</h2>
-                    <p>Site vitrine, site catologue, solution e-commerce, blog</p>
+                    <div class="services-text">
+
+                        <h2>Projets web</h2>
+
+                        <p>Création de site vitrine, site catologue, solution e-commerce, site institutionnel, blog</p>
+                    </div>
+                    <div class="services-text">
+
+                        <h2>Conception graphique</h2>
+                        <p>Webdesign, templates, charte graphique</p> <br>
+                    </div>
+                    <div class="services-text">
+
+                        <h2>Référencement naturel</h2>
+                        <p>Un code optimisé pour un référencement optimal</p>
+                    </div>
+
+
                 </div>
 
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="services-card">
-                    <img src="{% static '../static/dsigndev/images/designer.svg' %}" alt="">
-                    <h2>Conception graphique</h2>
-                    <p>Webdesign, templates, charte graphique</p>
+            <div class="col-xs-12 col-md-2 img-center">
+
+                <div class="services-photo">
+                    <img src=" {% static '../static/dsigndev/images/services.svg' %} " alt="">
                 </div>
 
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="services-card">
-                    <img src="{% static '../static/dsigndev/images/referenceur.svg' %}" alt="">
-                    <h2>Référencement naturel</h2>
-                    <p>Un code optimisé pour un référencement optimal</p>
-                </div>
 
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="services-card">
-                    <img src="{% static '../static/dsigndev/images/integrateur.svg' %}" alt="">
-                    <h2>Intégration Web</h2>
-                    <p>Html, Css répondant aux standards du Web</p>
-                </div>
 
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="services-card">
-                    <img src="{% static '../static/dsigndev/images/responsive.svg' %}" alt="">
-                    <h2>Responsive Design</h2>
-                    <p>Compatible sur tous support: Ordinateur, tablette et mobile</p>
-                </div>
+            <div class="col-xs-12 col-md-5">
+                <div class="services-card services-bordey">
+                    <div class="services-text">
 
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="services-card">
-                    <img src="{% static '../static/dsigndev/images/tdb.svg' %}" alt="">
-                    <h2>Interface d'administration</h2>
-                    <p>Tableau de bord très simple d'utilisation permettant de gérer le fonctionnement du site</p>
-                </div>
+                        <h2>Intégration Web</h2>
+                        <p>Html, Css répondant aux standards du Web</p><br>
+                    </div>
+                    <div class="services-text">
 
+                        <h2>Responsive Design</h2>
+                        <p>Compatible sur tous supports : Ordinateur, tablette et mobile</p>
+                    </div>
+                    <div class="services-text">
+
+                        <h2>Interface d'administration</h2>
+                        <p>Tableau de bord ergonomique permettant de modifier tout élément présent sur le site</p>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
 </div>
 <div class="projets-container">
-    <div class="container-fluid">
+    <div id='projets' class="container-fluid">
         <div class="projets-header">
-            <h1>Projets</h1>
-            <hr>
+            <h1>Projets </h1>
+            <hr class="service-line">
         </div>
         <div class="row">
             {% for projet in projets %}
@@ -84,11 +161,11 @@
                 <a data-toggle="modal" data-target="#exampleModal{{ projet.id }}" style="cursor: pointer;">
                     <div class="projets-card">
                         <div class="projet-image" style="background-image: url('{{ projet.image.url}}');">
-                        </div>
-                        <div class="projets-header-card">
-                            <h1>{{ projet.title }}</h1>
+                            <div class="projets-header-card">
+                                <h1>{{ projet.title }}</h1>
 
 
+                            </div>
                         </div>
                     </div>
                 </a>
@@ -99,33 +176,38 @@
                 aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">{{projet.title}}</h5>
+                        <div class="modal-header no-border">
+                            <h5 class="modal-title" id="exampleModalLongTitle"></h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide" style="background-image: url('{{ projet.image.url}}');">
-                                    </div>
-                                    <div class="swiper-slide" style="background-image: url('{{ projet.image.url}}');">
-                                    </div>
-                                    <div class="swiper-slide" style="background-image: url('{{ projet.image.url}}');">
-                                    </div>
+                            <div class="projets-text">
+                                <h1>{{projet.title}} - <span>{{ projet.category}}</span></h1>
+                                <hr class="service-line">
+                                <p>{{ projet.description|linebreaksbr }}</p>
 
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="projets-photo" style="background-image: url('{{ projet.image.url}}');">
+                                    </div>
                                 </div>
+
+                                {% if projet.image1 %}
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="projets-photo" style="background-image: url('{{ projet.image.url}}');">
+                                    </div>
+                                </div>
+
+                                {% endif %}
+
                             </div>
 
-                            <div class="swiper-pagination"></div>
 
-                            <p>{{ projet.description }}</p>
                         </div>
-                        <div class="modal-footer">
+                        <div class="modal-footer visite-btn">
                             {% if projet.url %}
                             <a href="{{ projet.url}}">Visiter le site</a>
                             {% else %}
@@ -142,38 +224,129 @@
 </div>
 <div class="container-fluid">
     <div class="contact-container">
+        <div class="projets-header" id="contact">
+            <h1>Contact</h1>
+            <hr class="service-line">
+        </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <ul>
-                    <li>David CRENIN</li>
-                    <li>Développeur web</li>
-                    <li>Paris</li>
-                    <li>david.crenin@gmail.com</li>
-                    <li>+33 (0)684098911</li>
-                </ul>
+            <div class="col-xs-12 col-md-6 ">
+                <div class="contact-info">
+
+                    <ul>
+                        <li><img src="{% static '../static/dsigndev/images/identité.svg' %}" alt=""> David CRENIN
+                        </li>
+                        <li><img src="{% static '../static/dsigndev/images/job.svg' %}" alt=""> Développeur web</li>
+                        <li><img src="{% static '../static/dsigndev/images/telephone.svg' %}" alt=""> <a
+                                href="tel:0684098911">+33 (0)6 84 09 89 11</a>
+                        </li>
+                        <li><img src="{% static '../static/dsigndev/images/email.svg' %}" alt=""> <a
+                                href="mailto:david.crenin@gmail.com"> david.crenin@gmail.com</a>
+                        </li>
+                        <li><img src="{% static '../static/dsigndev/images/adresse.svg' %}" alt=""> Paris</li>
+                    </ul>
+
+                </div>
             </div>
-            <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-12 col-md-6">
                 <div class="contact-form">
-                    <form method="POST" class="card-body">
+
+                    <form method="POST" class="">
                         {% csrf_token %}
-                        {{ form.as_p }}
-                        <button type="submit">Send</button>
+                        <div class="section-contact">
+
+
+                            <label for="">Votre email</label>
+                            <br>
+                            {{ form.from_email }}
+
+
+                        </div>
+                        <div class="section-contact">
+
+                            <label for="">Objet du message</label>
+                            <br>
+                            {{ form.subject }}
+
+
+                        </div>
+                        <div class="section-contact">
+
+                            <label for="">Votre message</label>
+                            <br>
+                            {{ form.message }}
+
+
+                        </div>
+                        <div class="contact-form-btn">
+                            <a href="" type="submit">ENVOYER</a>
+                        </div>
+
                     </form>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+<div class="footer-container">
+    <div class="container">
+        <div class="footer">
+            <div class="row">
+                <div class="col-xs-12 col-sm-9">
+                    <div class="footer-presentation">
+                        <h1>Développeur Web <span>freelance</span></h1>
+                        <p>
+                            Développeur Web freelance, je suis disponible pour répondre à
+                            tout type de projets de création de sites internet.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="footer-links">
+                        <img src="{% static '../static/dsigndev/images/logo-dev.svg' %}" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="footer-copyright">
+    <h2 class="text-center"> Copyright © 2020 - Dsigndev - Tous droits réservés - Plan du site</h2>
+</div>
+
 {% endblock content %}
 
 {% block extra_js %}
+
+
 <script>
-    var swiper = new Swiper('.swiper-container', {
-        scrollbar: {
-            el: '.swiper-scrollbar',
-            hide: true,
-        },
-    });
+    $(document).ready(function () {
+        $('.js-anchor-link').click(function (e) {
+            e.preventDefault();
+            var target = $($(this).attr('href'));
+            if (target.length) {
+                var scrollTo = target.offset().top;
+                $('body, html').animate({ scrollTop: scrollTo + 'px' }, 1000);
+            }
+        });
+
+    })
 </script>
+
+<script>
+    $(document).ready(function () {
+
+        $('.first-button').on('click', function () {
+
+            $('.animated-icon1').toggleClass('open');
+        });
+    });
+
+</script>
+
 {% endblock extra_js %}
