@@ -9,13 +9,13 @@ from .forms import MessageForm, ContactForm
 from django.contrib import messages
 from .models import (
     Projet,
-    Message,
+
 )
 
 
 class HomePageView(View):
     template_name = 'home.html'
-    model = Projet, Message
+    model = Projet
 
     def get(self, request):
         projets = Projet.objects.order_by('-created_at')
