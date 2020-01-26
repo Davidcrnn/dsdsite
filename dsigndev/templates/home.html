@@ -76,7 +76,7 @@
             </div>
             <div class="col-xs-12 col-sm-7">
                 <div class="banner-bg">
-                    <img src="{% static '../static/dsigndev/images/bg.svg' %}" alt="">
+                    <img src="{% static 'dsigndev/images/bg.svg' %}" alt="">
                 </div>
             </div>
         </div>
@@ -120,7 +120,7 @@
             <div class="col-xs-12 col-md-2 img-center">
 
                 <div class="services-photo">
-                    <img src=" {% static '../static/dsigndev/images/services.svg' %} " alt="">
+                    <img src=" {% static 'dsigndev/images/services.svg' %} " alt="">
                 </div>
 
 
@@ -160,7 +160,7 @@
             <div class="col-xs-12 col-sm-6 col-md-4">
                 <a data-toggle="modal" data-target="#exampleModal{{ projet.id }}" style="cursor: pointer;">
                     <div class="projets-card">
-                        <div class="projet-image" style="background-image: url('{{ projet.image.url}}');">
+                        <div class="projet-image" style="background-image: url('{{ projet.image.url }}');">
                             <div class="projets-header-card">
                                 <h1>{{ projet.title }}</h1>
 
@@ -178,9 +178,9 @@
                     <div class="modal-content">
                         <div class="modal-header no-border">
                             <h5 class="modal-title" id="exampleModalLongTitle"></h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <a type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
-                            </button>
+                            </a>
                         </div>
                         <div class="modal-body">
                             <div class="projets-text">
@@ -191,13 +191,13 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12 col-md-6">
-                                    <div class="projets-photo" style="background-image: url('{{ projet.image.url}}');">
+                                    <div class="projets-photo" style="background-image: url('{{ projet.image.url }}');">
                                     </div>
                                 </div>
 
                                 {% if projet.image1 %}
                                 <div class="col-xs-12 col-md-6">
-                                    <div class="projets-photo" style="background-image: url('{{ projet.image.url}}');">
+                                    <div class="projets-photo" style="background-image: url('{{ projet.image.url }}');">
                                     </div>
                                 </div>
 
@@ -209,9 +209,9 @@
                         </div>
                         <div class="modal-footer visite-btn">
                             {% if projet.url %}
-                            <a href="{{ projet.url}}">Visiter le site</a>
+                            <a href="{{ projet.url }}">Visiter le site</a>
                             {% else %}
-                            <a href="" class="disabled">Pas encore disponible</a>
+                            <a href="#projets" class="js-anchor-link">En développement</a>
                             {% endif %}
                         </div>
                     </div>
@@ -233,16 +233,16 @@
                 <div class="contact-info">
 
                     <ul>
-                        <li><img src="{% static '../static/dsigndev/images/identite.svg' %}" alt=""> David CRENIN
+                        <li><img src="{% static 'dsigndev/images/identite.svg' %}" alt=""> David CRENIN
                         </li>
-                        <li><img src="{% static '../static/dsigndev/images/job.svg' %}" alt=""> Développeur web</li>
-                        <li><img src="{% static '../static/dsigndev/images/telephone.svg' %}" alt=""> <a
-                                href="tel:0684098911">+33 (0)6 84 09 89 11</a>
+                        <li><img src="{% static 'dsigndev/images/job.svg' %}" alt=""> Développeur web</li>
+                        <li><img src="{% static 'dsigndev/images/telephone.svg' %}" alt=""> <a href="tel:0684098911">+33
+                                (0)6 84 09 89 11</a>
                         </li>
-                        <li><img src="{% static '../static/dsigndev/images/email.svg' %}" alt=""> <a
+                        <li><img src="{% static 'dsigndev/images/email.svg' %}" alt=""> <a
                                 href="mailto:david.crenin@gmail.com"> david.crenin@gmail.com</a>
                         </li>
-                        <li><img src="{% static '../static/dsigndev/images/adresse.svg' %}" alt=""> Paris</li>
+                        <li><img src="{% static 'dsigndev/images/adresse.svg' %}" alt=""> Paris</li>
                     </ul>
 
                 </div>
@@ -305,7 +305,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-3">
                     <div class="footer-links">
-                        <img src="{% static '../static/dsigndev/images/logo-dev.svg' %}" alt="">
+                        <img src="{% static 'dsigndev/images/logo-dev.svg' %}" alt="">
                     </div>
 
                 </div>

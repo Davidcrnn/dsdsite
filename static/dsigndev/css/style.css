@@ -313,6 +313,10 @@
   .projets-text p {
     font-family: 'Lato', sans-serif; }
 
+.close {
+  color: #002139 !important;
+  font-size: 40px; }
+
 .contact-container {
   color: #002139;
   padding: 0 40px; }
@@ -400,7 +404,7 @@ textarea.contact-input {
     padding: 15px 0;
     margin: 0; }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 650px) {
   .navbar-container {
     padding: 15px; }
   .banner-text {
@@ -444,20 +448,6 @@ textarea.contact-input {
 .projet-modal-container {
   color: #002139;
   background-color: rgba(0, 33, 57, 0.6); }
-
-.swiper-container {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px; }
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px; }
-
-.swiper-wrapper {
-  height: 300px; }
 
 body {
   background-color: white;

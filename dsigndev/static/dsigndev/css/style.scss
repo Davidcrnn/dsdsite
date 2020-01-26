@@ -2,14 +2,14 @@
 @import 'navbar';
 @import 'home';
 @import 'modal';
-@import 'swipper';
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
 body {
     background-color: white;
     color: white;
     font-family: 'Nueva';
 }
 
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 @font-face {
     font-family: 'Nueva';
     src: local('Nueva'),
