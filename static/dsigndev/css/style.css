@@ -142,11 +142,15 @@
   transform: rotate(-135deg); }
 
 .menu-modal-nav {
+  padding: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   background: white;
-  height: 100vh;
-  padding: 90px;
-  display: flex;
-  align-items: center; }
+  overflow: auto;
+  z-index: 99; }
   .menu-modal-nav li > a {
     color: #002139;
     font-size: 35px; }
@@ -465,5 +469,3 @@ body {
 @font-face {
   font-family: 'Nueva';
   src: local("Nueva"), url("../fonts/NuevaStd-Regular.otf") format("opentype"); }
-
-/*# sourceMappingURL=style.css.map */
