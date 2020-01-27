@@ -162,7 +162,8 @@
   width: 100%; }
 
 .banner-impact h1 {
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  font-size: 38px; }
 
 .banner-text {
   color: #002139;
@@ -375,6 +376,11 @@ textarea.contact-input {
     background-color: #ffffff;
     text-decoration: none; }
 
+.alert-warning {
+  background-color: #002139 !important;
+  color: white !important;
+  font-family: 'Lato', sans-serif !important; }
+
 .footer-container {
   height: auto;
   background-color: #002139;
@@ -419,6 +425,8 @@ textarea.contact-input {
     padding: 0 15px; }
   .banner-call {
     text-align: center; }
+  .banner-impact h1 {
+    font-size: 38px; }
   .services-container {
     padding: 20px 0; }
   .services-card {
