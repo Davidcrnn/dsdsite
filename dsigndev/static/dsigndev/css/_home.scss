@@ -19,6 +19,7 @@
 }
 .banner-impact h1 {
     letter-spacing: 2px;
+    font-size: 38px;
 }
 .banner-text {
     color: $color-blue;
@@ -357,6 +358,10 @@ textarea.contact-input {
 
     .banner-call {
         text-align: center;
+    }
+
+    .banner-impact h1 {
+        font-size: 38px;
     }
 
     .services-container {
