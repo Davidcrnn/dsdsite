@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sass_processor',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -112,6 +113,7 @@ USE_L10N = True
 USE_TZ = True
 
 EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 SENDGRID_SANDBOX_MODE_IN_DEBUG = False
 SENDGRID_API_KEY = config('SENGDRID_API_KEY')
 EMAIL_HOST = 'smtp.sendgrid.net'
@@ -135,15 +137,25 @@ SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'dsigndev/static'),
 ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 prod_db = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
 
 DEBUG_PROPAGATE_EXCEPTIONS = False
+
+MEDIA_URL = '/media/'
+
+
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
+
+AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_REGION_NAME = 'eu-west-3'
+AWS_DEFAULT_ACL = None
+AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'

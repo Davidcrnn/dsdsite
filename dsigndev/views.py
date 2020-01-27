@@ -5,7 +5,7 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
-from .forms import MessageForm, ContactForm
+from .forms import ContactForm
 from django.contrib import messages
 from .models import (
     Projet,
@@ -39,9 +39,9 @@ class HomePageView(View):
                 try:
                     send_mail(subject, message, from_email,
                               ['david.crenin@gmail.com'], fail_silently=False)
-                    messages.success(
+                    messages.warning(
                         request, 'Votre message a été envoyé !')
                 except BadHeaderError:
                     return HttpResponse('Invalid header found.')
                 return redirect('home')
-        return render(request, "contact.html", {'form': form},)
+        return render(request, "home.html", {'form': form},)
