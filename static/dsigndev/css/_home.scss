@@ -267,26 +267,31 @@ textarea.contact-input {
 
 .contact-form-btn {
     text-align: center;
+    button[type='submit'] {
+        color: white;
+        font-size: 20px;
+        padding: 15px 20px;
+        font-family: 'Lato', sans-serif;
+        width: 100%;
+        
+        background: $color-blue;
+        border: 2px solid $color-blue;
+        transition: 0.9s ease-in-out;
+    } a:hover {
+        color: $color-blue;
+        background-color: #ffffff;
+        text-decoration: none;
 
-
-a {
-    color: white;
-    font-size: 20px;
-    padding: 15px 20px;
-    font-family: 'Lato', sans-serif;
-    width: 100%;
-    
-    background: $color-blue;
-    border: 2px solid $color-blue;
-    transition: 0.9s ease-in-out;
-} a:hover {
-    color: $color-blue;
-    background-color: #ffffff;
-    text-decoration: none;
-
-}
+    }
 }
 
+// Message css
+
+.alert-warning {
+    background-color: $color-blue !important;
+    color: white !important;
+    font-family: 'Lato', sans-serif !important;
+}
 
 // Footer Section
 
