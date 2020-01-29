@@ -146,7 +146,7 @@
 .projets-header-card {
 
     h1 {
-        font-size: 25px;
+        font-size: 16px;
         margin: 0;
         font-family: 'Lato', sans-serif;
         padding: 30px;
@@ -289,10 +289,14 @@ textarea.contact-input {
 // Message css
 
 .alert-warning {
-    background-color: $color-blue !important;
-    color: white !important;
-    font-family: 'Lato', sans-serif !important;
+    background-color: $color-blue ;
+    color: white ;
+    font-family: 'Lato', sans-serif ;
+    border: none ;
+    padding: 15px;
+    border-radius :none ;
 }
+
 
 // Footer Section
 
@@ -313,6 +317,8 @@ textarea.contact-input {
     width: 50%;
     p {
         font-family: 'Lato', sans-serif;
+    } span > a {
+        color: #51d3bd;
     } span {
         color: #51d3bd;
     }
@@ -361,7 +367,7 @@ textarea.contact-input {
     }
 
     .banner-impact h1 {
-        font-size: 38px;
+        font-size: 31px;
     }
 
     .services-container {
