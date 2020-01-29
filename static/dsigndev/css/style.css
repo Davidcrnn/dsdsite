@@ -152,6 +152,10 @@
     color: #002139;
     font-size: 35px; }
 
+button[type=button] {
+  -moz-appearance: none;
+  -webkit-appearance: none; }
+
 .banner-home {
   width: 100%;
   background-repeat: no-repeat;
@@ -416,9 +420,38 @@ textarea.contact-input {
     padding: 15px 0;
     margin: 0; }
 
+#myBtn {
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 20px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background: transparent;
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  border-radius: 3px; }
+  #myBtn img {
+    height: 50px;
+    width: 50px; }
+
+#myBtn:hover {
+  opacity: 0.7; }
+
 @media screen and (max-width: 650px) {
   .navbar-container {
     padding: 15px; }
+  #myBtn img {
+    height: 30px;
+    width: 30px; }
   .banner-text {
     padding: 30px 0;
     order: 2; }
@@ -472,3 +505,5 @@ body {
   font-family: 'Nueva';
   src: local("Nueva"), url("../fonts/NuevaStd-Regular.otf") format("opentype");
   font-display: swap; }
+
+/*# sourceMappingURL=style.css.map */
