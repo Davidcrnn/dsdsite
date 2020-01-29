@@ -14,7 +14,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -35,9 +35,6 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    # 'django.middleware.cache.UpdateCacheMiddleware',
-    # 'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.cache.FetchFromCacheMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -48,13 +45,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# CACHE_MIDDLEWARE_ALIAS = 'default'
 
-# # Additional prefix for cache keys
-# CACHE_MIDDLEWARE_KEY_PREFIX = ''
-
-# # Cache key TTL in seconds
-# CACHE_MIDDLEWARE_SECONDS = 600
 
 
 ROOT_URLCONF = 'dsdsite.urls'
@@ -147,13 +138,6 @@ STATICFILES_FINDERS = [
 
 SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR, 'static')
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'dsigndev/static'),
-]
 prod_db = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
 
@@ -172,3 +156,10 @@ AWS_DEFAULT_ACL = None
 AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'dsigndev/static'),
+]

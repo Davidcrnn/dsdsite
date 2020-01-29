@@ -3,6 +3,8 @@
 @import 'home';
 @import 'modal';
 
+
+
 body {
     background-color: white;
     color: white;
@@ -14,4 +16,5 @@ body {
     font-family: 'Nueva';
     src: local('Nueva'),
     url('../fonts/NuevaStd-Regular.otf') format('opentype');
+    font-display: swap;
 }

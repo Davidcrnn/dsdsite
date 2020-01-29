@@ -159,7 +159,7 @@
                     <div class="projets-card">
                         <div class="projet-image" style="background-image: url('{{ projet.image.url }}');">
                             <div class="projets-header-card">
-                                <h1>{{ projet.title }}</h1>
+                                <h1>{{ projet.category }}</h1>
 
 
                             </div>
@@ -206,7 +206,7 @@
                         </div>
                         <div class="modal-footer visite-btn">
                             {% if projet.url %}
-                            <a href="{{ projet.url }}">Visiter le site</a>
+                            <a href="{{ projet.url }}" target="_blank">Visiter le site</a>
                             {% else %}
                             <a href="#projets" class="js-anchor-link">En développement</a>
                             {% endif %}
@@ -303,7 +303,8 @@
                         <h1>Développeur Web <span>freelance</span></h1>
                         <p>
                             Vous voulez présenter vos produits ou vos services sur le net, mieux communiquer avec vos
-                            clients ou rajeunir votre ancien site web : <span>contactez-moi</span>.
+                            clients ou rajeunir votre ancien site web : <span><a href="#contact" class="js-anchor-link">
+                                    contactez-moi</a></span>.
 
                         </p>
 
@@ -358,6 +359,8 @@
             $('.animated-icon1').removeClass('open');
 
         })
+
+        $('.alert-warning').delay(2000).fadeOut(300); 
     });
 
 </script>
