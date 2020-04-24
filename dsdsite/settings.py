@@ -19,7 +19,11 @@ DEBUG = False
 if DEBUG:
     ALLOWED_HOSTS = ['*']
 else:
-    ALLOWED_HOSTS = ['localhost', 'dsigndev.com']
+    ALLOWED_HOSTS = [
+        'localhost',
+        'ancient-retreat-84146.herokuapp.com',
+        'www.dsigndev.com'
+    ]
 
 
 # Application definition
